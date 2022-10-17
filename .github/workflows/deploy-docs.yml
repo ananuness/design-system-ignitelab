@@ -23,9 +23,9 @@ jobs:
         run: npm ci # ci for non-interactive environments
 
       - name: Build Storybook
-        run: npm run build-storybook
+        run: npm run build-sb
 
       - name: Deploy Storybook
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static # passing where the building of storybook is
+        run: npm run deploy-sb -- --ci --existing-output-dir=storybook-static # passing where the building of storybook is
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
